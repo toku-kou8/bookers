@@ -24,8 +24,8 @@ class BooksController < ApplicationController
   end
   
   def update
-    list = Book.find(params[:id])
-    list.update(book_params)
+    book = Book.find(params[:id])
+    book.update(book_params)
     redirect_to book_path(book.id), notice:'Book was successfully updated.'
   end
   
