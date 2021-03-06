@@ -1,0 +1,19 @@
+<p class='information'>
+  <%= notice %>
+</p>
+<div class='main'>
+  <p>
+    <strong>Title</strong>
+    <%= @book.title %>
+  </p>
+  <p>
+    <strong>Body</strong>
+    <%= @book.body %>
+  </p>
+</div>
+<div class='main, bottom'>
+  <%= link_to 'Edit', '/books/:id/edit' %>
+  |
+  
+  <%= link_to 'Back', "/books" %>
+</div>
