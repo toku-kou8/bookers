@@ -2,16 +2,16 @@
   <%= notice %>
 </p>
 <div class='main'>
-  <p>
+  <p class='name'>
     <strong>Title</strong>
     <%= @book.title %>
   </p>
-  <p>
+  <p class='name'>
     <strong>Body</strong>
     <%= @book.body %>
   </p>
 </div>
-<div class='main, bottom'>
+<div class='main bottom'>
   <%= link_to 'Edit', {:action=>"edit", :controller=>"books", :id=>@book.id} %>
   |
   
