@@ -24,8 +24,20 @@
 </table>
 
 <h2>New book</h2>
+<% if @book.errors.any? %>
+<p class ="error-count">
+<%= @book.errors.count %> errors prohibited this book from being saved:
+</p>
+  <div class = 'alert alert-warning'>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%=message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_with model: @book, url:'/books', local:true do |f| %>
-<%= render "error_messages", model: f.object %>
+
   <div class="input">
     <label>Title</label>
     <div class='title'><%= f.text_field :title %></div>
